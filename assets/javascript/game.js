@@ -13,6 +13,7 @@ window.onload = function() {
     var computerRandom = letters(Math.floor(Math.random() * letters.length));
     computerRandom.push(random);
 }
+console.log(computerRandom);
 
 
 // Game Play
