@@ -1,62 +1,85 @@
 // Variables
 
+//Letter Array
+
 var letters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
 
-//Test Array
-console.log(letters);
-
+//Variables to hold stats
 var guessedLetter = [];
-console.log(guessedLetter)
 var losses = 0;
 var wins = 0;
-var guessesLeft = 9;
+var guessesLeft = 10;
 
-//Set up random letter
+//Variables to reference HTML elements
+//document.getElementById("wins-text").innerHTML;
+//var lossesText = document.getElementById("losses-text").innerHTML;
+//var leftText = document.getElementById("left-text").innerHTML;
+
+//Display user stats
+document.getElementById("wins-text").innerHTML = "Wins: " + wins;
+document.getElementById("losses-text").innerHTML = "Losses: " + losses;
+document.getElementById("left-text").innerHTML = "Guesses Left: " + guessesLeft;
+//Space between logged guessed letterrs is not working
+document.getElementById("guessed-text").innerHTML = "Your Guessed Letters: " + guessedLetter + " ";
+
+ //Set up random letter
 var random = letters[Math.floor(Math.random() * letters.length)];
-//Test Random letter
 console.log(random);
 
 // Game Play
 document.onkeyup = function(event) {
-    key = event.key.toLowerCase();
-    console.log(key);
-    //not in scope?
-    var guessedLetter = [];
-    guessedLetter.push(key);
-    console.log(guessedLetter);
-    //return guessedLetter;
-}
+    var key = event.key.toLowerCase();
+    //console.log(key);
 
-
+     //User guessed letter gets pushed to array
+     guessedLetter.push(key);
+     console.log(guessedLetter);
+     
+//Conditions     
+     //Wrong Guess
+        if ((guessedLetter !== random) && (guessesLeft > 0)) {
+            //Guesses left descreases by one
+           guessesLeft = guessesLeft - 1;
+           document.getElementById("left-text").innerHTML = "Guesses Left: " + guessesLeft;
+           console.log(guessesLeft);
+            //Guessed letters get logged for view
+           document.getElementById("guessed-text").innerHTML = "Your Guessed Letters: " + guessedLetter;
+        }
+    //Right Guess still have guesses left (if else)
+       else if (guessedLetter === random) {
+            //Win increase by one
+            wins++;
+            document.getElementById("wins-text").innerHTML = "Wins: " + wins;
+            console.log(wins);
+            //Guesses left remains the same
+           guessesLeft = guessesLeft;
+           console.log(guessesLeft);
+            //Random array gets launched
+            //var random = letters[Math.floor(Math.random() * letters.length)];
+            //console.log(random);
+       }
+       else {
+           losses++; 
+           //reset
+       }
+    }
 // Conditions
-//If the player guesses the randomly generated letter (random) and guesses (guessesLeft) are above 0
+//Wrong Guess (if) - greater than zero
+    //guesses left descreases by one
+    //Guessed letters get logged for view
+    
+//Right Guess still have guesses left (if else)
+    //Win increase by one
+    //Guesses left remains the same
+    //Random array gets launched
 
+//Game Over
+    //Losses increase by 1
+    //Guesses left gets reset
+    //Game reset - random array gets launched
 
-if (("guessedLetter" === random) && (guessesLeft > 0)) {
-    //var win goes up by 1
-    wins++;
-    console.log(wins);
-    //guessedLetters resets
-    guessedLetter.length = 0;
-    //guessesLeft resets
-    guessedLeft.length = 9;
-    //New letter generated randomly from array
-    var random = letters(Math.floor(Math.random() * letters.length));
-}
-
-else if (("guessedLetter" !== random) && (guessesLeft > 0)) {
-    //Then guessesLeft goes down by one
-    guessesLeft=guessesLeft-1;
-}
-
-else {
-    //losses increase
-    losses ++;
-    //guessedLetter is reset
-    guessedLetter.length = 0;
-    //guessesLeft resests
-    guessesLeft=guessesLeft + 10;
-    //game is reset and letter chosen from array
-    var random = letters(Math.floor(Math.random() * letters.length));
-    random.push(random);
-}
+//Text Display
+    //Wins
+    //Losses
+    //Guesses Left
+    //Letters Guessed
