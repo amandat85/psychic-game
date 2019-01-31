@@ -24,10 +24,11 @@ function gameStart () {
 }
 
 gameStart();
+randomLetter();
 
 //Generate Random Letter
-    var random = letters[Math.floor(Math.random() * letters.length)];
-    console.log(random);
+   // var random = letters[Math.floor(Math.random() * letters.length)];
+   // console.log(random);
 
 // Game Play
 document.onkeyup = function(event) {
@@ -43,35 +44,27 @@ document.onkeyup = function(event) {
     //Conditions     
      //Right Guess
      if ((key === random) && (guessesLeft > 0)) {
-        wins++;
+        wins++; //wins not increasing
         document.getElementById("wins-text").innerHTML = "Wins: " + wins;
         console.log(wins);
-        //reset guessed letters array
-        //randomLetter();  
+        randomLetter();  
     }    
+    //Wrong Guess
     else if ((key !== random) && (guessesLeft > 0)) {
         guessesLeft = guessesLeft - 1;
         document.getElementById("left-text").innerHTML = "Guesses Left: " + guessesLeft;
         console.log(guessesLeft);
     }
-
-    else if (guessesLeft === 0) {
-        losses++;
+    //Out of Guesses -fix
+    else {
+        losses++; //losses not increasimg
         randomLetter();
-        //gameStart();
+        gameStart();
     }
-}
-
-//Reset Variables for game
-function resetVariables () {
-    wins = 0;
-    losses = 0;
-    guessedLetter= [];
-    guessesLeft = 10;
 }
 
 //Generate Random Letter function
 function randomLetter() {
-    var random = letters[Math.floor(Math.random() * letters.length)];
+    random = letters[Math.floor(Math.random() * letters.length)];
     console.log(random);
 }
