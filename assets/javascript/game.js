@@ -26,10 +26,6 @@ function gameStart () {
 gameStart();
 randomLetter();
 
-//Generate Random Letter
-   // var random = letters[Math.floor(Math.random() * letters.length)];
-   // console.log(random);
-
 // Game Play
 document.onkeyup = function(event) {
 
@@ -47,6 +43,7 @@ document.onkeyup = function(event) {
         wins++; //wins not increasing
         document.getElementById("wins-text").innerHTML = "Wins: " + wins;
         console.log(wins);
+        //reset guessed letters
         randomLetter();  
     }    
     //Wrong Guess
@@ -55,11 +52,11 @@ document.onkeyup = function(event) {
         document.getElementById("left-text").innerHTML = "Guesses Left: " + guessesLeft;
         console.log(guessesLeft);
     }
-    //Out of Guesses -fix
+    //Out of Guesses
     else {
-        losses++; //losses not increasimg
+        losses++; 
+        document.getElementById("losses-text").innerHTML = "Losses: " + losses;
         randomLetter();
-        gameStart();
     }
 }
 
