@@ -16,7 +16,6 @@ function gameStart () {
     document.getElementById("wins-text").innerHTML = "Wins: " + wins;
     losses = 0;
     document.getElementById("losses-text").innerHTML = "Losses: " + losses;
-    //Spacing??
     guessedLetter= [];
     document.getElementById("guessed-text").innerHTML = "Your Guessed Letters: " + guessedLetter + " ";
     guessesLeft = 10;
@@ -38,7 +37,7 @@ document.onkeyup = function(event) {
     console.log(key);
 
 //User guessed letter gets pushed to array
-    guessedLetter.push(key);
+    guessedLetter.push(" " + " " + key);
     console.log(guessedLetter);
     document.getElementById("guessed-text").innerHTML = "Your Guessed Letters: " + guessedLetter;
 
@@ -49,7 +48,7 @@ document.onkeyup = function(event) {
         document.getElementById("wins-text").innerHTML = "Wins: " + wins;
         console.log(wins);
         //Clear guessed letters
-        for (var i = guessedLetter.length; i > 0; i--) {
+        for (var i = 0; i = guessedLetter.length;  i--) {
             guessedLetter.pop();
         }
         document.getElementById("guessed-text").innerHTML = "Your Guessed Letters: " + guessedLetter;

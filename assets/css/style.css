@@ -5,14 +5,16 @@
 
 html, body {
     height: 100%;   
+    font-family: 'Noto Sans TC', sans-serif;
 }
 
 .jumbotron-background {
     /*background-image: url("assets/images/purple-background.png");*/
     background-color: #CBB1D8;
 }
-.j-height {
-    height: 35%;
+
+h1, h2 {
+    font-family: 'Merienda', cursive;
 }
 
 #bottom-line {
@@ -24,9 +26,6 @@ html, body {
     color: #ffffff;
 }
 
-h2 {
-    font-family: 'ABeeZee', sans-serif;
-}
 
 .border-stylization {
     border-left: solid 8px #5B4174;
