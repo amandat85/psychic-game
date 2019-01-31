@@ -16,11 +16,16 @@ function gameStart () {
     document.getElementById("wins-text").innerHTML = "Wins: " + wins;
     losses = 0;
     document.getElementById("losses-text").innerHTML = "Losses: " + losses;
+    //Spacing??
     guessedLetter= [];
-    document.getElementById("left-text").innerHTML = "Guesses Left: " + guessesLeft;
-    guessesLeft = 10;
-    //Spacing
     document.getElementById("guessed-text").innerHTML = "Your Guessed Letters: " + guessedLetter + " ";
+    guessesLeft = 10;
+    document.getElementById("left-text").innerHTML = "Guesses Left: " + guessesLeft;
+}
+
+function guessesLeftReset () {
+    guessesLeft = 10;
+    document.getElementById("left-text").innerHTML = "Guesses Left: " + guessesLeft;
 }
 
 gameStart();
@@ -43,7 +48,12 @@ document.onkeyup = function(event) {
         wins++; //wins not increasing
         document.getElementById("wins-text").innerHTML = "Wins: " + wins;
         console.log(wins);
-        //reset guessed letters
+        //Clear guessed letters
+        for (var i = guessedLetter.length; i > 0; i--) {
+            guessedLetter.pop();
+        }
+        document.getElementById("guessed-text").innerHTML = "Your Guessed Letters: " + guessedLetter;
+        //Choose random letter
         randomLetter();  
     }    
     //Wrong Guess
@@ -56,6 +66,14 @@ document.onkeyup = function(event) {
     else {
         losses++; 
         document.getElementById("losses-text").innerHTML = "Losses: " + losses;
+         //Clear guessed letters
+         for (var i = guessedLetter.length; i > 0; i--) {
+            guessedLetter.pop();  
+        } 
+        document.getElementById("guessed-text").innerHTML = "Your Guessed Letters: " + guessedLetter;
+       //Reset Guesses Left
+        guessesLeftReset ();
+        //Choose random letter
         randomLetter();
     }
 }
