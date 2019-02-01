@@ -6,6 +6,7 @@ The objective of this game is to guess the letter that the computer has generate
 * HTML
 * Javascript
 * CSS
+* Google Fonts
 
 ## Rules
 * The player has 10 tries to guess the letter, from A-Z,  the computer has generated.
