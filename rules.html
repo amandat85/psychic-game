@@ -17,50 +17,39 @@
         <div class="jumbotron jumbotron-background" id="bottom-line">
             <h1 class="display-5 mt-n5 text-center">Guess the Letter</h1>
             <p class="lead text-center">This is a simple guess the letter game.</p>
-            <a class="btn btn-md" id="button-color" href="rules.html" role="button">Rules</a>
+            <a class="btn btn-md" id="button-color" href="index.html" role="button">Game</a>
         </div>
 
         <!--Card Side Left & Card Main-->
-        <div class="container-fluid mt-5">
+        <div class="container-fluid">
             <div class="row">
-                <div class="col-md-8">
+                <div class="col-md-12">
                     <div class="card h-60 mt-2">
                         <div class="card-body border-stylization">
-                            <h2 class=" card-title text-center" id="cardhearder">What Letter Am I Thinking Of?</h2>
+                            <h2 class=" card-title text-center" id="cardhearder">Rules</h2>
                                 <div class="container-fluid">
                                     <div class="row">
                                         <div class="col-md-12">
-                                            <h4 class="card-subtitle text-center">Press any key to begin</h4>
-                                            <p id="wins-text"></p>
-                                            <p id="losses-text"></p>
-                                            <p id="left-text"></p>
-                                            <p id="guessed-text"></p>
+                                        <ul>
+                                            <li>The player has 10 tries to guess the letter, from A-Z, the computer has generated.</li>
+                                            <li>The player can launch the game by pressing any key.</li>
+                                            <li>If the key pressed matches the randomly generated computer leter than the player wins a point and another letter will be generated.</li>
+                                            <li>If the key pressed does not match the randomly generated computer letter, then the guess count decreases by 1 for every wrong letter guessed.</li>
+                                            <li>If the player is out of guesses their losses will increase by on and the computer will generate another letter</li>
+                                            <li>Letters already guessed will dislay on the "Guessed Letters" area of the screen.</li>
+                                        </ul>
+                                            
                                         </div>
                                     </div>
                                 </div>
                         </div> 
                     </div>                           
                 </div>
-
-                <div class="col-md-4 mb-auto">
-                    <div class="card mb-4 mt-2">
-                        <div class="card-body border-stylization">
-                            <div class="container-fluid">
-                                <div class="row">
-                                    <div class="col-md-12 text-center">
-                                        <img class="img-fluid card-img-top w-50" src="assets/images/crystal.png">
-                                    </div>
-                                </div>
-                            </div>
-                        </div> 
-                    </div>                           
-                </div>
-
             </div>
         </div>     
 
         <!--Footer-->
-        <div class="footer d-flex justify-content-center pt-2 pb-2" id="footercolor">
+        <div class="footer d-flex justify-content-center mt-5 pt-2 pb-2" id="footercolor">
             <p>Copyright &copy; 2019 - Amanda Tomé</p>
         </div>
               
