@@ -33,7 +33,7 @@ randomLetter();
 // Game Play
 document.onkeyup = function(event) {
 
-    var key = event.key.toLowerCase();
+    var key = String.fromCharCode(event.keyCode).toLowerCase();
     console.log(key);
 
 //User guessed letter gets pushed to array
@@ -42,7 +42,7 @@ document.onkeyup = function(event) {
     document.getElementById("guessed-text").innerHTML = "Your Guessed Letters: " + guessedLetter;
 
     //Conditions     
-     //Right Guess
+    //Right Guess
      if ((key === random) && (guessesLeft > 0)) {
         wins++; //wins not increasing
         document.getElementById("wins-text").innerHTML = "Wins: " + wins;
