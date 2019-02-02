@@ -22,7 +22,7 @@ function gameStart () {
     document.getElementById("left-text").innerHTML = "Guesses Left: " + guessesLeft;
 }
 
-function guessesLeftReset () {
+function guessesLeftReset() {
     guessesLeft = 10;
     document.getElementById("left-text").innerHTML = "Guesses Left: " + guessesLeft;
 }
