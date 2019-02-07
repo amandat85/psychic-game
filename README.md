@@ -2,7 +2,7 @@
 The objective of this game is to guess the letter that the computer has generated. 
 
 ## Site
-https://amandat85.github.io/psychic-game/
+https://amandat85.github.io/Psychic-Game/
 
 ## Languages and Tools Used
 * Bootstrap
