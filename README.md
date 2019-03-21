@@ -19,3 +19,7 @@ https://amandat85.github.io/Psychic-Game/
 * If the player is out of guesses their losses will increase by one and the game will relaunch.
 * Letters already guessed will be displayed for players next to the "Guessed Letters" area of the screen.
 
+##Animated Gif
+![Psychic Game Demo](psychic-game.gif)
+
+
