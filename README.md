@@ -20,6 +20,6 @@ https://amandat85.github.io/Psychic-Game/
 * Letters already guessed will be displayed for players next to the "Guessed Letters" area of the screen.
 
 ##Animated Gif
-![Psychic Game Demo](psychic-game.gif)
+![Psychic Game Demo](psychic_game.gif)
 
 
