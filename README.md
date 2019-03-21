@@ -5,10 +5,10 @@ The objective of this game is to guess the letter that the computer has generate
 https://amandat85.github.io/Psychic-Game/
 
 ## Languages and Tools Used
-* Bootstrap
-* HTML
+* HTML 5
+* CSS 3
+* Bootstrap 4
 * Javascript
-* CSS
 * Google Fonts
 
 ## Rules
