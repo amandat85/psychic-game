@@ -23,5 +23,5 @@ https://amandatome.github.io/Psychic-Game/
 ![Psychic Game Demo](psychic_game.gif)
 
 ## Assignment Details
-![Homework Details](homework-instructions.md)
+[Homework Details](homework-instructions.md)
 
