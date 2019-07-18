@@ -36,6 +36,10 @@ h1, h2 {
     border-bottom: solid 2px #CBB1D8;
 }
 
+img {
+    width: 250px!important;
+    margin-left: 5rem;
+}
 
 #footercolor {
     background-color: #CBB1D8;
