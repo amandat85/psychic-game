@@ -4,6 +4,9 @@ The objective of this game is to guess the letter that the computer has generate
 ## Site
 https://amandatome.github.io/Psychic-Game/
 
+## Assignment Details
+[Homework Details](homework-instructions.md)
+
 ## Languages and Tools Used
 * HTML 5
 * CSS 3
@@ -21,7 +24,3 @@ https://amandatome.github.io/Psychic-Game/
 
 ## Animated Gif
 ![Psychic Game Demo](psychic_game.gif)
-
-## Assignment Details
-[Homework Details](homework-instructions.md)
-
