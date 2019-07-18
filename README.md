@@ -22,4 +22,6 @@ https://amandatome.github.io/Psychic-Game/
 ## Animated Gif
 ![Psychic Game Demo](psychic_game.gif)
 
+## Assignment Details
+![Homework Details](homework
 
